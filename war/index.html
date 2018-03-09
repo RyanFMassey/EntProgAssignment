@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+	<head>
+		 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Ent Prog</title>
+		<link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+		<script src="scripts/getCourses.js"></script>
+		<script src="scripts/jquery.js"></script>
+	</head>
+	<body>
+		<div id="content" align="center">
+			<h1>Enterprise Programming Assignment</h1>
+			<fieldset>
+				<legend>Get All Courses</legend>
+				<form action="#">
+					<label for="return-type">Return:</label>
+					<select id="return-type">
+						<option value="XMLtable">Table from XML</option>
+						<option value="JSONtable">Table from JSON</option>
+						<option value="list">String</option>
+					</select>
+				
+					<input type="button" value="Show Courses" onclick='getAll("#allTable", "return-type")'/>
+					<input type="button" value="Clear" onclick='clearDiv("#allTable")'/>
+					<p/>
+					<div id="allTable" align="center"></div>
+				</form>
+			</fieldset>
+			
+			<br>
+			
+			<fieldset>
+				<legend>Get Course By ID</legend>
+				<form action="#">
+					<label for="courseID">Course ID:</label>
+					<input type="text" id="courseID" name="courseID">
+					<input type="button" value="Find Course" onclick='getByID("#idTable", "courseID")'/>
+					<input type="button" value="Clear" onclick='clearDiv("#idTable")'/>
+					<p/>
+					<div id="idTable" align="center"></div>
+				</form>
+			</fieldset>
+			
+			
+			<br>
+			
+			<fieldset>
+				<legend>Get Course By Tutor</legend>
+				<form action="#">
+					<label for="tutorName">Tutor Name:</label>
+					<input type="text" id="tutorName" name="tutorName">
+					<input type="button" value="Find Course(s)" onclick='getByTutor("#tutorTable", "tutorName")'/>
+					<input type="button" value="Clear" onclick='clearDiv("#tutorTable")'/>
+					<p/>
+					<div id="tutorTable" align="center"></div>
+				</form>
+			</fieldset>
+			
+			<br>
+			
+			<fieldset>
+				<legend>Get Course By Name</legend>
+				<form action="#">
+					<label for="courseName">Course Name:</label>
+					<input type="text" id="courseName" name="courseName">
+					<input type="button" value="Find Course(s)" onclick='getByName("#courseTable", "courseName")'/>
+					<input type="button" value="Clear" onclick='clearDiv("#courseTable")'/>
+					<p/>
+					<div id="courseTable" align="center"></div>
+				</form>
+			</fieldset>
+			
+			<br>
+			
+			<fieldset>
+				<legend>Insert Course</legend>
+				<form method="POST" action="#" id="insert">
+					<label for="insertID">Course ID:</label>
+					<input type="text" id="id" name="id">
+					
+					<label for="insertName">Course Name:</label>
+					<input type="text" id="name" name="name">
+					
+					<label for="courseCredits">Credits:</label>
+					<input type="text" id="credits" name="credits">
+					
+					<br>
+					
+					<label for="courseDuration">Duration:</label>
+					<input type="text" id="duration" name="duration">
+					
+					<label for="courseTutor">Course Tutor:</label>
+					<input type="text" id="tutor" name="tutor">
+					
+					<input type="button" value="Add Course" onclick='insertCourse("#result")'/>
+					<p/>
+					<div id="result" align="center"></div>
+				</form>
+			</fieldset>
+			
+			</p>
+			<form action = jQueryUI.html>
+				<input type="submit" value="To JQueryUI Version"/>
+			</form>
+		</div>
+	</body>
+</html>

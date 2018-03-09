@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+	<head>
+		 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Ent Prog</title>
+		<link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+		<link href="./css/jquery-ui.css" rel="stylesheet">
+		<script src="scripts/getCourses.js"></script>
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/jquery-ui.js"></script>
+	</head>
+	<body>
+		<div id="assignmentTabs">
+			<ul>
+			 	<li><a href="tabs/getAll.jsp">Get All Courses</a></li>
+			 	<li><a href="tabs/getByID.jsp">Get By ID</a></li>
+			 	<li><a href="tabs/getByTutor.jsp">Get By Course Tutor</a></li>
+			 	<li><a href="tabs/getByName.jsp">Get By Course Name</a></li>
+			 	<li><a href="tabs/insertCourse.jsp">Insert Course</a></li>
+			</ul> 
+		</div> 
+		
+		<script>$("#assignmentTabs").tabs();</script>
+	</body>
+</html>
